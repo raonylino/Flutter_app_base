@@ -5,6 +5,30 @@ class ImagesPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Imagens'),
+      ),
+      body: Center(
+        child: Container(
+        width: 300,
+        height: 200,
+        decoration: BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage('assets/image/moto.jpeg'), fit: BoxFit.cover),
+        ),
+        child: Center(
+          child: Text(
+            'Yamaha R9',
+            style: TextStyle(
+                backgroundColor: 
+                Colors.white.withOpacity(0.5),
+                 fontSize: 20
+                 ),
+          ),
+        ),
+      )
+      ),
+    );
   }
 }
