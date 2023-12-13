@@ -1,20 +1,26 @@
-
-
+import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:mao_namassa/home/home_page.dart';
-import 'package:mao_namassa/home/home_page2.dart';
 
-void main(){
-  runApp(Myapp());
+late List<CameraDescription> cameras;
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  cameras = await availableCameras();
+
+  runApp(const Myapp());
 }
 
 class Myapp extends StatelessWidget {
+  const Myapp({super.key});
+
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: HomePage2(),
+      home: const HomePage(),
     );
   }
 }

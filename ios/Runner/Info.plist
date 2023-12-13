@@ -4,6 +4,8 @@
 <dict>
 	<key>NSCameraUsageDescription</key>
 	<string>teste da camera para aplicativo </string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>teste da camera para aplicativo </string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
